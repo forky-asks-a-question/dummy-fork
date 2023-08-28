@@ -1,4 +1,6 @@
 name: Build and Review PR
+run-name: Build and Review PR #${{ github.event.pull_request.number }}
+
 on:
   # This workflow uses the pull_request trigger which prevents write permissions on the
   # GH_TOKEN and secrets access from public forks.  This should remain as a pull_request
