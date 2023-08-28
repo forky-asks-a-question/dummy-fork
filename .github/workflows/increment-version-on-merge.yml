@@ -23,6 +23,6 @@ on:
 
 jobs:
   increment-version:
-    uses: im-open/.github/.github/workflows/reusable-version-on-merge.yml@v1
+    uses: im-open/.github-fake/.github/workflows/reusable-version-on-merge.yml@v1
     with:
       default-branch: main
