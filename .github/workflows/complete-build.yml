@@ -1,0 +1,20 @@
+on:
+  workflow_run:
+    workflows: [Build and Review PR]
+    types: [completed]
+
+jobs:
+  try-stuff:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print previous workflow conclusion
+        run: echo "The previous workflow conclusion is - '${{ github.event.workflow_run.conclusion}}'"
+      
+      - name: Print previous workflow payload
+        run: echo "${{ toJson(github.event.workflow_run) }}"
+      
+      - name: Print a var
+        run: echo "The fake variable is ${{ vars.FAKE_VARIABLE }}"
+      
+      - name: Print a secret
+        run: echo "The fake secret is ${{ secrets.FAKE_SECRET }}"
