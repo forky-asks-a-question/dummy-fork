@@ -13,17 +13,11 @@ jobs:
       - name: Print previous workflow conclusion
         run: echo "The previous workflow conclusion is - '${{ github.event.workflow_run.conclusion}}'"
       
-      - name: Print previous workflow payload JSON
-        uses: actions/github-script@v6
-        with:
-          script: |
-            console.log(JSON.parse(`${{ github.event.workflow_run }}`))
-      
-      - name: Print previous workflow payload plain
-        uses: actions/github-script@v6
-        with:
-          script: |
-            console.log(`${{ github.event.workflow_run }}`) 
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: |
+          echo "$GITHUB_CONTEXT"
       
       - name: Print a var
         run: echo "The fake variable is ${{ vars.FAKE_VARIABLE }}"
