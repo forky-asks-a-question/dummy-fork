@@ -17,13 +17,13 @@ jobs:
         uses: actions/github-script@v6
         with:
           script: |
-            console.log(JSON.parse(${{ github.event.workflow_run }}))
+            console.log(JSON.parse(`${{ github.event.workflow_run }}`))
       
       - name: Print previous workflow payload plain
         uses: actions/github-script@v6
         with:
           script: |
-            console.log(${{ github.event.workflow_run }}) 
+            console.log(`${{ github.event.workflow_run }}`) 
       
       - name: Print a var
         run: echo "The fake variable is ${{ vars.FAKE_VARIABLE }}"
