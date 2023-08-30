@@ -7,6 +7,7 @@ const requiredArgOptions = {
   trimWhitespace: true
 };
 
+console.log('making a source code change');
 /*
 Getting different inputs
   - Use the different functions to get different input types
