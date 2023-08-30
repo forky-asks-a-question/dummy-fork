@@ -1,4 +1,4 @@
-# javascript-action-template
+# dummy-action
 
 This template can be used to quickly start a new custom js action repository.  Click the `Use this template` button at the top to get started.
 
