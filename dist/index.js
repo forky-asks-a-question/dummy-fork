@@ -2431,5 +2431,6 @@ Support boolean input list: \`true | True | TRUE | false | False | FALSE\``);
 
 // src/main.js
 var core = require_core();
+console.log('make a source code change and re-compile but do not update readme.md');
 async function run() {}
 run();
