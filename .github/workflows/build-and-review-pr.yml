@@ -1,5 +1,5 @@
 name: Build and Review PR
-run-name: Build and Review PR ${{ github.event.pull_request.number }}
+run-name: Build and Review PR #${{ github.event.pull_request.number }}
 on:
   # https://docs.github.com/en/actions/security-guides/automatic-token-authentication#permissions-for-the-github_token
   #
@@ -25,8 +25,6 @@ jobs:
     uses: im-open/.github/.github/workflows/reusable-build-and-review-pr.yml@reusable-refactor
     with:
       action-name: ${{ github.repository }}
-      default-branch: main
-      readme-location: './README.md'
       files-with-code: 'action.yml,package.json,package-lock.json'
       dirs-with-code: 'src,dist'                                
-      build-command: 'npm run build'                            
+      build-command: 'npm run build'
