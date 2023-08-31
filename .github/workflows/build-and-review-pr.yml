@@ -25,9 +25,6 @@ jobs:
     uses: im-open/.github/.github/workflows/reusable-build-and-review-pr.yml@reusable-refactor
     with:
       action-name: ${{ github.repository }}
-      default-branch: main
-      readme-name: 'README.md'
-      contribution-id: '#stuff'
       files-with-code: 'action.yml,package.json,package-lock.json'
       dirs-with-code: 'src,dist'                                
       build-command: 'npm run build'
