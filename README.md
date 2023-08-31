@@ -36,11 +36,11 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: 'Try it once'
-        uses: im-open/dummy@v1.0.0
+        uses: im-open/dummy@v1.0.1
         with:
           input: ''
       - name: 'Try it again'
-        uses: im-open/dummy@v1.0.0
+        uses: im-open/dummy@v1.0.1
         with:
           input: ''
 ```
